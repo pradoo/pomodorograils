@@ -11,7 +11,7 @@ class Task {
 	//types start with Capital, contstraints lower case
     static constraints = {
 		summary blank:false, unique:true
-		details blank: false
+		details blank: false, maxSize: 1000
 		deadline nullable: true
 		timeSpent min: 0L
     }

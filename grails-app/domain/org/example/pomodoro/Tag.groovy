@@ -10,4 +10,8 @@ class Tag {
     static constraints = {
 		name blank: false, unique: true
     }
+	
+	String toString(){
+		return name
+	}
 }
