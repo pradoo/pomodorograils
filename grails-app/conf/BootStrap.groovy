@@ -34,7 +34,7 @@ class BootStrap {
 			summary: "Shopping", 
 			details: "Do the grocery shopping - and don't forget the tomatoes!", 
 			status: "Open", 
-			deadline: new Date() + 15) 
+			deadline: new Date()) 
 		task.addToTags(homeTag) 
 		task.save(failOnError: true)
 	}
