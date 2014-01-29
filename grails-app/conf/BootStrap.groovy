@@ -11,13 +11,29 @@ class BootStrap {
 		
 		def task = new Task(
 			summary: "Carrer Fair",
-			details: "Frank Erwin Center CNS career fair")
+			details: "Frank Erwin Center CNS career fair",
+			status: "Open")
 		/*
 		 * anytime that a domain class has a collection property of
 		 * has many it gains addTo___ and removeFrom___ methods 
 		 */
 		task.addToTags(workTag)
 		task.addToTags(schoolTag)
+		task.save(failOnError: true)
+		
+		task = new Task(
+			summary: "Pick up nephews",
+			details: "La shaygerl",
+			status: "Open")
+		task.addToTags(homeTag)
+		task.save(failOnError:true)
+		
+		task = new Task( 
+			summary: "Shopping", 
+			details: "Do the grocery shopping - and don't forget the tomatoes!", 
+			status: "Open", 
+			deadline: new Date() + 15) 
+		task.addToTags(homeTag) 
 		task.save(failOnError: true)
 	}
     def destroy = {
