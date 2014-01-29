@@ -12,7 +12,8 @@ class BootStrap {
 		def task = new Task(
 			summary: "Carrer Fair",
 			details: "Frank Erwin Center CNS career fair",
-			status: "Open")
+			status: "Open",
+			deadline: new Date() -1)
 		/*
 		 * anytime that a domain class has a collection property of
 		 * has many it gains addTo___ and removeFrom___ methods 
@@ -24,8 +25,9 @@ class BootStrap {
 		task = new Task(
 			summary: "Pick up nephews",
 			details: "La shaygerl",
-			status: "Open")
-		task.addToTags(homeTag)
+			status: "Open",
+			deadline: new Date() + 2)
+		task.addToTags(schoolTag)
 		task.save(failOnError:true)
 		
 		task = new Task( 
